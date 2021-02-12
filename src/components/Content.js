@@ -14,7 +14,7 @@ function Content() {
         (result) => {
           setIsLoaded(true);
           setWeatherdata(result.main);
-          console.log(weatherdata);
+          //console.log(weatherdata);
         },
         // Note: it's important to handle errors here instead of a catch() block so that we don't swallow exceptions from actual bugs in components.
         (error) => {
