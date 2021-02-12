@@ -4,7 +4,11 @@ function Content() {
   console.log(
     `https://api.openweathermap.org/data/2.5/weather?q=${process.env.REACT_APP_CITY}&appid=${process.env.REACT_APP_API_KEY}`
   );
-  console.log(process.env.testi);
+  console.log(
+    process.env.testi +
+      process.env.REACT_APP_CITY +
+      process.env.REACT_APP_API_KEY
+  );
   // const [error, setError] = useState(null);
   // const [isLoaded, setIsLoaded] = useState(false);
   // const [weatherdata, setWeatherdata] = useState([]);
