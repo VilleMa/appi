@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Askcity from "./Askcity";
+import fetch from "node-fetch";
 
 function Content() {
   const [error, setError] = useState(null);
@@ -7,15 +8,12 @@ function Content() {
   const [weatherdata, setWeatherdata] = useState([]);
   // Note: the empty deps array [] means this useEffect will run once(similar to componentDidMount())
   useEffect(() => {
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${process.env.REACT_APP_CITY}&appid=${process.env.REACT_APP_API_KEY}`
-    )
+    fetch(`/.netlify/functions/getWeather`)
       .then((res) => res.json())
       .then(
         (result) => {
           setIsLoaded(true);
           setWeatherdata(result.main);
-          //console.log(weatherdata);
         },
         // Note: it's important to handle errors here instead of a catch() block so that we don't swallow exceptions from actual bugs in components.
         (error) => {
