@@ -29,7 +29,7 @@
   box-shadow: 0 0 1vh rgba(0, 180, 255, 1);
   align-items: center;
   text-align: center;
-  border-radius: ;
+
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -44,7 +44,7 @@
 
 .Header-style {
   padding-top: 1vh;
-  min-height: 10vh;
+  min-height: 5vh;
 }
 
 .Footer-style {
@@ -54,7 +54,7 @@
   min-height: 5vh;
 }
 .Content-style {
-  min-height: 45vh;
+  min-height: 50vh;
 }
 .liststyle {
   list-style-type: none;
